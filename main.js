@@ -35,6 +35,10 @@ const tests = {
     fn: () => isOdd(200),
     target: false,
   },
+  factorial: {
+    fn: () => factorial(6),
+    target: 720,
+  },
 };
 
 /**
