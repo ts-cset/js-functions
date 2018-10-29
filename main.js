@@ -43,6 +43,10 @@ const tests = {
     fn: () => oddFactorial(5),
     target: 15,
   },
+  eightBits: {
+    fn: () => eightBits('10110'),
+    target: '00010110',
+  },
 };
 
 /**
