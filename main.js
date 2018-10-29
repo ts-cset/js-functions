@@ -26,7 +26,15 @@ const tests = {
   max: {
     fn: () => max(5, 3),
     target: 5,
-  }
+  },
+  isEven: {
+    fn: () => isEven(200),
+    target: true,
+  },
+  isOdd: {
+    fn: () => isOdd(200),
+    target: false,
+  },
 };
 
 /**
