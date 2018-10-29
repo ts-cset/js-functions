@@ -12,12 +12,20 @@ function showResult(section, result) {
 // TODO: randomize inputs?
 const tests = {
   add: {
-    fn: () => { return add(5, 6); },
+    fn: () => add(5, 6),
     target: 11,
   },
   subtract: {
-    fn: () => { return subtract(2, 1); },
+    fn: () => subtract(2, 1),
     target: 1,
+  },
+  min: {
+    fn: () => min(5, 3),
+    target: 3,
+  },
+  max: {
+    fn: () => max(5, 3),
+    target: 5,
   }
 };
 
