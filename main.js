@@ -39,6 +39,10 @@ const tests = {
     fn: () => factorial(6),
     target: 720,
   },
+  oddFactorial: {
+    fn: () => oddFactorial(5),
+    target: 15,
+  },
 };
 
 /**
