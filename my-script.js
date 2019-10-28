@@ -57,7 +57,8 @@ const greeting = (name) => {
 
 /**
  * Write a function called `oddFactorial` that takes a single integer and
- * returns the product of the integer and all the integers below it, but only if they are odd. If the starting number is odd, don't include it.
+ * returns the product of the integer and all the integers below it, but
+ * only if they are odd. If the starting number is even, don't include it.
  */
 
 
