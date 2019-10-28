@@ -112,16 +112,17 @@ const oddFactorial = (n) => {
  */
  const chessboard = () => {
    let board = '';
-
    for (let row = 0; row < 6; row++) {
      for (let column = 0; column < 6; column++) {
        if (row % 2 === 0) {
+         //even rows - ' # # #\n'
          if (column % 2 === 0) {
            board += ' ';
          } else {
            board += '#';
          }
        } else {
+         //odd rows - '# # # \n'
          if (column % 2 === 0) {
            board += '#';
          } else {
