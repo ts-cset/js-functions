@@ -58,7 +58,13 @@ const max = (num1, num2) => {
  * Write a function called `isEven` that takes a single value and
  * returns `true` if it is even and `false` if it is odd
  */
-
+const isEven = (n) => {
+  if (n % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /**
  * Write a function called `isOdd` that takes a single value and
