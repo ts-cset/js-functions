@@ -23,23 +23,30 @@ const greeting = (name) => {
  */
 const add = (num1, num2) => {
   return (num1 + num2);
-}
+};
 
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
 const subtract = (num1, num2) => {
   return (num1 - num2);
-}
+};
 
 /**
  * Write a function called `min` that returns the smaller of two numbers
  */
-
+const min = (num1, num2) => {
+  if (num1 <= num2) {
+    return num1;
+  } else if (num1 > num2) {
+    return num2;
+  }
+};
 
 /**
  * Write a function called `max` that returns the larger of two numbers
  */
+
 
 /**
  * Write a function called `isEven` that takes a single value and
