@@ -28,8 +28,8 @@ if (myScript.min) {
 
 if (myScript.max) {
   test('max()', () => {
-    expect(myScript.min(1, 6)).toBe(6);
-    expect(myScript.min(-10, -20)).toBe(-10);
+    expect(myScript.max(1, 6)).toBe(6);
+    expect(myScript.max(-10, -20)).toBe(-10);
   });
 }
 
@@ -43,9 +43,9 @@ if (myScript.isEven) {
 
 if (myScript.isOdd) {
   test('isOdd()', () => {
-    expect(myScript.isEven(0)).toBe(false);
-    expect(myScript.isEven(222)).toBe(false);
-    expect(myScript.isEven(111)).toBe(true);
+    expect(myScript.isOdd(0)).toBe(false);
+    expect(myScript.isOdd(222)).toBe(false);
+    expect(myScript.isOdd(111)).toBe(true);
   });
 }
 
