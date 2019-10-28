@@ -173,7 +173,7 @@ function chessboard(x){
   let column = x;
   let ans = "";
 
-  for (let number = 0; number <= row; number++) {
+  for (let number = 1; number <= row; number++) {
 
     for (let number2 = 0; number2 < column; number2++) {
 
