@@ -110,6 +110,29 @@ const oddFactorial = (n) => {
  * Instead of printing each line using `console.log()`, build the grid using
  * a single string and return it at the end of the function
  */
+ const chessboard = () => {
+   let board = '';
+
+   for (let row = 0; row < 6; row++) {
+     for (let column = 0; column < 6; column++) {
+       if (row % 2 === 0) {
+         if (column % 2 === 0) {
+           board += ' ';
+         } else {
+           board += '#';
+         }
+       } else {
+         if (column % 2 === 0) {
+           board += '#';
+         } else {
+           board += ' ';
+         }
+       }
+     }
+     board += '\n';
+   }
+   return board;
+ }
 
 
 /*******************************************
