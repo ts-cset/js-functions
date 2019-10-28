@@ -21,7 +21,9 @@ const greeting = (name) => {
 /**
  * Write a function called `add` that returns the sum of two numbers
  */
-
+const add = (num1, num2) => {
+  return (num1 + num2);
+}
 
 /**
  * Write a function called `subtract` that returns the difference between two numbers
@@ -84,4 +86,3 @@ module.exports = {
   oddFactorial: typeof oddFactorial === 'function' ? oddFactorial : null,
   chessboard: typeof chessboard === 'function' ? chessboard : null,
 };
-
