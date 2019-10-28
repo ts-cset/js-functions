@@ -66,16 +66,15 @@ function subtract(a,x){
  * Write a function called `isOdd` that takes a single value and
  * returns `false` if it is even and `true` if it is odd
  */
-        function isOdd(a){
-         if(a % 2 > 0 ){
-		return true;
-	} else if( a == 0) {
-             return false;
+ function isOdd(a) {
+ if( a % 2 == 0){
+ return false;
 
-	} else{
-         return false;
+} else{
+return true;
+
+
 }
-
 
 }
 
@@ -83,7 +82,20 @@ function subtract(a,x){
  * Write a function called `factorial` that takes a single integer and
  * returns the product of the integer and all the integers below it
  */
+ function factorial(a) {
+   if( a == 1){
+       console.log("1");
+     } else if( a == 0){
+       console.log("Cannot be factored.");
+     } else {
+       for( let factor = a - 1; factor > 1; factor--) {
+         a = a*factor;
+       }
+       return a;
+     }
 
+ }
+ console.log(factorial(10));
 
 
 
@@ -91,14 +103,24 @@ function subtract(a,x){
  * Write a function called `oddFactorial` that takes a single integer and
  * returns the product of the integer and all the integers below it, but only if they are odd. If the starting number is odd, don't include it.
  */
+ function oddfactorial(a) {
+   if( a == 1){
+       console.log("1");
+     } else if( a == 0){
+       console.log("Cannot be factored.");
+     } else if(a % 2 > 0){
+   		console.log("This number is odd.");
+ } else {
+       for( let factor = a - 1; factor > 1; factor--) {
+         if( factor % 2 > 0){
+         a = a*factor;
+         }
+       }
+       return a;
+     }
 
+ }
 
-/**
- * Write a function that solves the Chessboard exercise from chapter two,
- * https://eloquentjavascript.net/02_program_structure.html#i_swb9JBtSQQ
- * Instead of printing each line using `console.log()`, build the grid using
- * a single string and return it at the end of the function
- */
 
 
 /*******************************************
