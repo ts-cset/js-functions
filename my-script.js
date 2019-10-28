@@ -21,38 +21,70 @@ const greeting = (name) => {
 /**
  * Write a function called `add` that returns the sum of two numbers
  */
-
+function add(a,x){
+    return a + x;
+}
 
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
+function subtract(a,x){
+      return a - x;
 
+}
 
 /**
  * Write a function called `min` that returns the smaller of two numbers
  */
-
+ function min(a,x){
+      return Math.min(a,x);
+}
 
 /**
  * Write a function called `max` that returns the larger of two numbers
  */
-
+  function max(a,x) {
+	return Math.max(a,x);
+}
 /**
  * Write a function called `isEven` that takes a single value and
  * returns `true` if it is even and `false` if it is odd
  */
+        function isEven(a) {
+        if( a % 2 == 0){
+        return true;
 
+} else{
+   return false;
+
+
+}
+
+}
 
 /**
  * Write a function called `isOdd` that takes a single value and
  * returns `false` if it is even and `true` if it is odd
  */
+        function isOdd(a){
+         if(a % 2 > 0 ){
+		return true;
+	} else if( a == 0) {
+             return false;
 
+	} else{
+         return false;
+}
+
+
+}
 
 /**
  * Write a function called `factorial` that takes a single integer and
  * returns the product of the integer and all the integers below it
  */
+
+
 
 
 /**
@@ -78,4 +110,3 @@ module.exports = {
   oddFactorial: typeof oddFactorial === 'function' ? oddFactorial : null,
   chessboard: typeof chessboard === 'function' ? chessboard : null,
 };
-
