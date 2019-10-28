@@ -21,46 +21,89 @@ const greeting = (name) => {
 /**
  * Write a function called `add` that returns the sum of two numbers
  */
-
+const add = (num1, num2) => {
+  return (num1 + num2);
+};
 
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
-
+const subtract = (num1, num2) => {
+  return (num1 - num2);
+};
 
 /**
  * Write a function called `min` that returns the smaller of two numbers
  */
-
+const min = (num1, num2) => {
+  if (num1 <= num2) {
+    return num1;
+  } else if (num1 > num2) {
+    return num2;
+  }
+};
 
 /**
  * Write a function called `max` that returns the larger of two numbers
  */
+const max = (num1, num2) => {
+  if (num1 >= num2) {
+    return num1;
+  } else if (num1 < num2) {
+    return num2;
+  }
+}
 
 /**
  * Write a function called `isEven` that takes a single value and
  * returns `true` if it is even and `false` if it is odd
  */
-
+const isEven = (n) => {
+  if (n % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /**
  * Write a function called `isOdd` that takes a single value and
  * returns `false` if it is even and `true` if it is odd
  */
-
+const isOdd = (n) => {
+  if (n % 2 === 1) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /**
  * Write a function called `factorial` that takes a single integer and
  * returns the product of the integer and all the integers below it
  */
-
+const factorial = (n) => {
+  let total = 1;
+  for (let counter = 0; counter < n; counter ++) {
+    total *= counter + 1;
+  }
+  return total;
+}
 
 /**
  * Write a function called `oddFactorial` that takes a single integer and
  * returns the product of the integer and all the integers below it, but
  * only if they are odd. If the starting number is even, don't include it.
  */
-
+const oddFactorial = (n) => {
+  let total = 1;
+  for (let counter = 0; counter < n; counter++) {
+    if((counter + 1) % 2 === 1) {
+      total *= counter + 1;
+    }
+  }
+  return total;
+}
 
 /**
  * Write a function that solves the Chessboard exercise from chapter two,
@@ -68,6 +111,30 @@ const greeting = (name) => {
  * Instead of printing each line using `console.log()`, build the grid using
  * a single string and return it at the end of the function
  */
+ const chessboard = () => {
+   let board = '';
+   for (let row = 0; row < 6; row++) {
+     for (let column = 0; column < 6; column++) {
+       if (row % 2 === 0) {
+         //even rows - ' # # #\n'
+         if (column % 2 === 0) {
+           board += ' ';
+         } else {
+           board += '#';
+         }
+       } else {
+         //odd rows - '# # # \n'
+         if (column % 2 === 0) {
+           board += '#';
+         } else {
+           board += ' ';
+         }
+       }
+     }
+     board += '\n';
+   }
+   return board;
+ }
 
 
 /*******************************************
@@ -85,4 +152,3 @@ module.exports = {
   oddFactorial: typeof oddFactorial === 'function' ? oddFactorial : null,
   chessboard: typeof chessboard === 'function' ? chessboard : null,
 };
-
