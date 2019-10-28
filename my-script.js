@@ -93,6 +93,12 @@ function subtract(a,x){
  */
 
 
+/**
+ * Write a function that solves the Chessboard exercise from chapter two,
+ * https://eloquentjavascript.net/02_program_structure.html#i_swb9JBtSQQ
+ * Instead of printing each line using `console.log()`, build the grid using
+ * a single string and return it at the end of the function
+ */
 
 
 /*******************************************
