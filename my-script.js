@@ -22,25 +22,74 @@ const greeting = (name) => {
  * Write a function called `add` that returns the sum of two numbers
  */
 
+ function add(x, y) {
+
+   return x + y;
+
+ }
 
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
 
+ function subtract(x, y) {
+
+   return x - y;
+
+ }
 
 /**
  * Write a function called `min` that returns the smaller of two numbers
  */
 
+ function min(x, y) {
+
+   if (x < y) {
+
+     return x;
+   } else {
+
+     return y;
+
+   }
+
+ }
 
 /**
  * Write a function called `max` that returns the larger of two numbers
  */
 
+ function max(x, y) {
+
+   if (x > y) {
+
+     return x;
+   } else {
+
+     return y;
+
+   }
+
+ }
+
 /**
  * Write a function called `isEven` that takes a single value and
  * returns `true` if it is even and `false` if it is odd
  */
+
+ function isEven(x) {
+
+   if (x % 2 == 0) {
+
+     return true;
+
+   } else {
+
+     return false;
+
+   }
+
+ }
 
 
 /**
@@ -48,12 +97,34 @@ const greeting = (name) => {
  * returns `false` if it is even and `true` if it is odd
  */
 
+ function isOdd(x) {
+
+   if (x % 2 == 0) {
+
+     return false;
+
+   } else {
+
+     return true;
+
+   }
+
+ }
 
 /**
  * Write a function called `factorial` that takes a single integer and
  * returns the product of the integer and all the integers below it
  */
 
+ function factorial(x) {
+
+  for (let i = x - 1; i > 0; i--) {
+    x = x * i;
+  }
+
+  return x;
+
+}
 
 /**
  * Write a function called `oddFactorial` that takes a single integer and
@@ -61,6 +132,31 @@ const greeting = (name) => {
  * only if they are odd. If the starting number is even, don't include it.
  */
 
+ function oddFactorial(x) {
+
+   if (x % 2 == 0) {
+
+     x--;
+
+   }
+
+  for (let i = x - 1; i > 0; i--) {
+
+    if (i % 2 == 0) {
+
+      continue;
+
+    }
+    else {
+
+      x = x * i;
+
+    }
+  }
+
+  return x;
+
+}
 
 /**
  * Write a function that solves the Chessboard exercise from chapter two,
@@ -68,6 +164,47 @@ const greeting = (name) => {
  * Instead of printing each line using `console.log()`, build the grid using
  * a single string and return it at the end of the function
  */
+
+function chessboard(x){
+
+  let hash = "#";
+  let space = " ";
+  let row = x;
+  let column = x;
+  let ans = "";
+
+  for (let number = 1; number <= row; number++) {
+
+    for (let number2 = 0; number2 < column; number2++) {
+
+  if(number % 2 == 0){
+    if (number2 % 2 == 0){
+        ans += hash;
+    }
+    else {
+     ans += space;
+    }
+
+    } else {
+
+  if (number2 % 2 == 0){
+        ans += space;
+    }
+    else {
+     ans += hash;
+    }
+
+    }
+
+    }
+
+    ans += "\n";
+
+  }
+
+  return ans;
+
+}
 
 
 /*******************************************
@@ -85,4 +222,3 @@ module.exports = {
   oddFactorial: typeof oddFactorial === 'function' ? oddFactorial : null,
   chessboard: typeof chessboard === 'function' ? chessboard : null,
 };
-
