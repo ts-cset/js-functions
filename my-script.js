@@ -70,7 +70,13 @@ const isEven = (n) => {
  * Write a function called `isOdd` that takes a single value and
  * returns `false` if it is even and `true` if it is odd
  */
-
+const isOdd = (n) => {
+  if (n % 2 === 1) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /**
  * Write a function called `factorial` that takes a single integer and
