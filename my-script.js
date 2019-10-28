@@ -94,7 +94,15 @@ const factorial = (n) => {
  * Write a function called `oddFactorial` that takes a single integer and
  * returns the product of the integer and all the integers below it, but only if they are odd. If the starting number is odd, don't include it.
  */
-
+const oddFactorial = (n) => {
+  let total = 1;
+  for (let counter = 0; counter < n; counter++) {
+    if((counter + 1) % 2 === 1) {
+      total *= counter + 1;
+    }
+  }
+  return total;
+}
 
 /**
  * Write a function that solves the Chessboard exercise from chapter two,
