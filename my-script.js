@@ -82,7 +82,13 @@ const isOdd = (n) => {
  * Write a function called `factorial` that takes a single integer and
  * returns the product of the integer and all the integers below it
  */
-
+const factorial = (n) => {
+  let total = 1;
+  for (let counter = 0; counter < n; counter ++) {
+    total *= counter + 1;
+  }
+  return total;
+}
 
 /**
  * Write a function called `oddFactorial` that takes a single integer and
