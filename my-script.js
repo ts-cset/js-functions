@@ -28,7 +28,9 @@ const add = (num1, num2) => {
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
-
+const subtract = (num1, num2) => {
+  return (num1 - num2);
+}
 
 /**
  * Write a function called `min` that returns the smaller of two numbers
