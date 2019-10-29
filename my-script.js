@@ -101,29 +101,61 @@ return true;
 
 /**
  * Write a function called `oddFactorial` that takes a single integer and
- * returns the product of the integer and all the integers below it, but
- * only if they are odd. If the starting number is even, don't include it.
+ * returns the product of the integer and all the integers below it, but only if they are odd. If the starting number is odd, don't include it.
  */
- function oddfactorial(a) {
+ function oddFactorial(a) {
    if( a == 1){
        console.log("1");
      } else if( a == 0){
        console.log("Cannot be factored.");
-     } else if(a % 2 > 0){
-   		console.log("This number is odd.");
- } else {
-       for( let factor = a - 1; factor > 1; factor--) {
-         if( factor % 2 > 0){
-         a = a*factor;
-         }
+     } else{
+       if( a % 2 == 0){
+         a = a -1;
        }
+         for( let factor = a - 1; factor > 1; factor--) {
+         if( factor % 2 > 0) {
+         a = a*factor;
+            }
+
+         }
        return a;
      }
 
  }
+ /**
+   * Write a function that solves the Chessboard exercise from chapter two,
+   * https://eloquentjavascript.net/02_program_structure.html#i_swb9JBtSQQ
+   * Instead of printing each line using `console.log()`, build the grid using
+   * a single string and return it at the end of the function
+   */
+  function chessboard(a){
+  let hash = "";
+   for (let column = 0; column < a; column++) {
+     if(column % 2 == 0) {
+   	for (let row = 0; row < a; row++) {
+       	if (row % 2 == 0) {
+           	hash += " ";
+           } else {
+               hash += "#";
+           }
+       }
+   } else {
+     	for(let row = 0; row < a; row ++){
+         if(row % 2 == 0) {
+           hash += "#";
 
+         }else{
+           hash += " ";
 
+         }
 
+       }
+
+   }
+   	hash += "\n";
+   }
+   return(hash);
+ }
 /*******************************************
  * DO NOT CHANGE ANYTHING BELOW THIS LINE!
  */
