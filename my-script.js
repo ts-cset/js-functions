@@ -77,7 +77,11 @@ return false;
  * Write a function called `factorial` that takes a single integer and
  * returns the product of the integer and all the integers below it
  */
-
+function factorial(x) {
+for (let y = (x - 1); y > 0; y--) {
+x = x * y;
+}
+}
 
 /**
  * Write a function called `oddFactorial` that takes a single integer and
