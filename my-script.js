@@ -21,15 +21,15 @@ const greeting = (name) => {
 /**
  * Write a function called `add` that returns the sum of two numbers
  */
-function add(x + x) {
-return x;
+function add(x, y) {
+return x + y;
 }
 
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
-function subtract(x - x) {
-return x;
+function subtract(x, y) {
+return x - y;
 }
 
 /**
