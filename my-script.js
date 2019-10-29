@@ -21,33 +21,57 @@ const greeting = (name) => {
 /**
  * Write a function called `add` that returns the sum of two numbers
  */
-
+function add(x + x) {
+return x;
+}
 
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
-
+function subtract(x - x) {
+return x;
+}
 
 /**
  * Write a function called `min` that returns the smaller of two numbers
  */
-
+function min (x, y) {
+if (x < y) {
+return x;
+}
+}
 
 /**
  * Write a function called `max` that returns the larger of two numbers
  */
-
+function max (x, y) {
+if (x > y) {
+return x;
+}
+}
 /**
  * Write a function called `isEven` that takes a single value and
  * returns `true` if it is even and `false` if it is odd
  */
-
+function isEven(x) {
+if (x % 2 == 0) {
+return true;
+} else {
+return false;
+}
+}
 
 /**
  * Write a function called `isOdd` that takes a single value and
  * returns `false` if it is even and `true` if it is odd
  */
-
+function isOdd(x) {
+if (x % 2 != 0) {
+return true;
+} else {
+return false;
+}
+}
 
 /**
  * Write a function called `factorial` that takes a single integer and
