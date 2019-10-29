@@ -57,10 +57,17 @@ const greeting = (name) => {
 
 /**
  * Write a function called `oddFactorial` that takes a single integer and
- * returns the product of the integer and all the integers below it, but only if they are odd. If the starting number is odd, don't include it.
+ * returns the product of the integer and all the integers below it, but
+ * only if they are odd. If the starting number is even, don't include it.
  */
 
 
+/**
+ * Write a function that solves the Chessboard exercise from chapter two,
+ * https://eloquentjavascript.net/02_program_structure.html#i_swb9JBtSQQ
+ * Instead of printing each line using `console.log()`, build the grid using
+ * a single string and return it at the end of the function
+ */
 
 
 /*******************************************
