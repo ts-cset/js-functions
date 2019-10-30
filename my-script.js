@@ -36,18 +36,22 @@ return x - y;
  * Write a function called `min` that returns the smaller of two numbers
  */
 function min (x, y) {
-if (x < y) {
-return x;
-}
+ if (x < y) {
+  return x;
+ } else if (x > y) {
+  return y;
+ }
 }
 
 /**
  * Write a function called `max` that returns the larger of two numbers
  */
 function max (x, y) {
-if (x > y) {
-return x;
-}
+ if (x > y) {
+  return x;
+ } else if (x < y) {
+  return y;
+ }
 }
 /**
  * Write a function called `isEven` that takes a single value and
