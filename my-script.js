@@ -22,14 +22,14 @@ const greeting = (name) => {
  * Write a function called `add` that returns the sum of two numbers
  */
 function add(x, y) {
-return x + y;
+ return x + y;
 }
 
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
 function subtract(x, y) {
-return x - y;
+ return x - y;
 }
 
 /**
@@ -58,11 +58,11 @@ function max (x, y) {
  * returns `true` if it is even and `false` if it is odd
  */
 function isEven(x) {
-if (x % 2 == 0) {
-return true;
-} else {
-return false;
-}
+ if (x % 2 == 0) {
+  return true;
+ } else {
+  return false;
+ }
 }
 
 /**
@@ -70,11 +70,11 @@ return false;
  * returns `false` if it is even and `true` if it is odd
  */
 function isOdd(x) {
-if (x % 2 != 0) {
-return true;
-} else {
-return false;
-}
+ if (x % 2 != 0) {
+  return true;
+ } else {
+  return false;
+ }
 }
 
 /**
@@ -82,10 +82,10 @@ return false;
  * returns the product of the integer and all the integers below it
  */
 function factorial(x) {
-for (let y = (x - 1); y > 0; y--) {
-x = x * y;
-}
-return x;
+ for (let y = (x - 1); y > 0; y--) {
+  x = x * y;
+ }
+ return x;
 }
 
 /**
@@ -98,12 +98,12 @@ function oddFactorial(x) {
   if (x % 2 == 0) {
     x = x - 1;
   }
-for (let y = (x - 1); y > 0; y--) {
-if (y % 2 != 0) {
-  x = x * y;
-} 
-}
-return x;
+  for (let y = (x - 1); y > 0; y--) {
+   if (y % 2 != 0) {
+    x = x * y;
+  } 
+ }
+ return x;
 }
 
 /**
@@ -112,7 +112,9 @@ return x;
  * Instead of printing each line using `console.log()`, build the grid using
  * a single string and return it at the end of the function
  */
-let output = "", width = 8, height = 8;
+
+function chessboard (width, height) {
+let output = "";
 for(let x = 1; x <= height; x++) {
   for(let y = 1; y <= width; y++) {
     if (output.length % 2 == 0) {
@@ -124,6 +126,7 @@ for(let x = 1; x <= height; x++) {
   output += "\n";
 }
 return output;
+}
 
 /*******************************************
  * DO NOT CHANGE ANYTHING BELOW THIS LINE!
