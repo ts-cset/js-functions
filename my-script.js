@@ -112,7 +112,18 @@ return x;
  * Instead of printing each line using `console.log()`, build the grid using
  * a single string and return it at the end of the function
  */
-
+let output = "", width = 8, height = 8;
+for(let x = 1; x <= height; x++) {
+  for(let y = 1; y <= width; y++) {
+    if (output.length % 2 == 0) {
+      output += "#"; 
+  } else {
+      output += " ";
+    }
+  }
+  output += "\n";
+}
+return output;
 
 /*******************************************
  * DO NOT CHANGE ANYTHING BELOW THIS LINE!
