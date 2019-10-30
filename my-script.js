@@ -81,6 +81,7 @@ function factorial(x) {
 for (let y = (x - 1); y > 0; y--) {
 x = x * y;
 }
+return x;
 }
 
 /**
