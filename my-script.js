@@ -89,9 +89,15 @@ return x;
  * returns the product of the integer and all the integers below it, but
  * only if they are odd. If the starting number is even, don't include it.
  */
+
 function oddFactorial(x) {
+  if (x % 2 == 0) {
+    x = x - 1;
+  }
 for (let y = (x - 1); y > 0; y--) {
-x = x * y;
+if (y % 2 != 0) {
+  x = x * y;
+} 
 }
 return x;
 }
