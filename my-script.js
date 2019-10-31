@@ -113,14 +113,14 @@ function oddFactorial(x) {
  * a single string and return it at the end of the function
  */
 
-function chessboard (width, height) {
+function chessboard (size) {
 let output = "";
-for(let x = 1; x <= height; x++) {
-  for(let y = 1; y <= width; y++) {
+for(let x = 1; x <= size; x++) {
+  for(let y = 1; y <= size; y++) {
     if (output.length % 2 == 0) {
-      output += "#"; 
+      output += " "; 
   } else {
-      output += " ";
+      output += "#";
     }
   }
   output += "\n";
