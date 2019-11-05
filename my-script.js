@@ -27,9 +27,6 @@ const greeting = (name) => {
   return add;
 }
 
-console.log(add(10,15));
-
-
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
@@ -39,22 +36,37 @@ console.log(add(10,15));
    return subtract;
  }
 
- console.log(subtract(10,5));
-
-
 /**
  * Write a function called `min` that returns the smaller of two numbers
  */
 
+ function min(a, b){
+  min=Math.min(a, b);
+  return min;
+};
 
 /**
  * Write a function called `max` that returns the larger of two numbers
  */
 
+ function max(a, b){
+  max=Math.max(a, b);
+  return max;
+};
+
 /**
  * Write a function called `isEven` that takes a single value and
  * returns `true` if it is even and `false` if it is odd
  */
+
+ function isEven(a){
+   if(a % 2 == 0){
+     console.log("True");
+   }
+   else{
+     console.log("False");
+   }
+ }
 
 
 /**
@@ -62,12 +74,28 @@ console.log(add(10,15));
  * returns `false` if it is even and `true` if it is odd
  */
 
+ function isOdd(a){
+   if(isOdd % 2 != 0){
+     console.log("True");
+   }
+   else{
+     console.log("False");
+   }
+ }
 
 /**
  * Write a function called `factorial` that takes a single integer and
  * returns the product of the integer and all the integers below it
  */
 
+ function factorial(a){
+   if (a == 0){
+     return 1;
+   }
+   else {
+     return factorial(a-1)*a;
+   }
+ }
 
 /**
  * Write a function called `oddFactorial` that takes a single integer and
