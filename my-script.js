@@ -80,7 +80,7 @@ function isEven(a){
   } else{
     return false;
   }
-}
+};
 
 
 /**
@@ -113,7 +113,7 @@ for ( count =1, total=1 ; count <= number; count++ ) {
 
 }
 return total;
-}
+};
 
 
 /**
@@ -122,23 +122,19 @@ return total;
  * only if they are odd. If the starting number is even, don't include it.
  */
 
-const oddfactorial = function(number) {
+const oddFactorial = function(number) {
 
 
 
-  for (count =1, total=1; count <= number; count ++) {
-
-if (count % 2 == 0) {
-
-}
-
-else {
-  return total;
-}
+  for ( count =1, total=1; count <= number; count = count + 2) {
 
   total = total * count;
 }
-}
+  return total;
+};
+
+
+
 
 /**
  * Write a function that solves the Chessboard exercise from chapter two,
@@ -147,6 +143,25 @@ else {
  * a single string and return it at the end of the function
  */
 
+const chessboard = function(x) {
+  let size = x;
+  let board = '';
+
+  for (let line = 1; line <= size; line++) {
+   for (let character = 1; character <= size; character++) {
+     if (line % 2 !== 0) {
+
+       board += character % 2 !== 0 ? " " : "#";
+     } else {
+
+       board += character % 2 !== 0 ? "#" : " ";
+     }
+   }
+   board += '\n';
+  }
+
+return board;
+}
 
 
 
