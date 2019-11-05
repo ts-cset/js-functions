@@ -22,25 +22,65 @@ const greeting = (name) => {
  * Write a function called `add` that returns the sum of two numbers
  */
 
+const add = function (a,b) {
+
+return a + b;
+};
+
+
 
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
 
+const subtract = function (a,b) {
+
+  return a - b;
+};
 
 /**
  * Write a function called `min` that returns the smaller of two numbers
  */
 
+const min = function (a,b) {
+
+  if (a > b ) {
+    return b;
+  };
+
+  if (a < b) {
+
+  return a;
+ };
+};
 
 /**
  * Write a function called `max` that returns the larger of two numbers
  */
 
+ const max = function (a,b) {
+
+ if (a > b ) {
+  return a;
+};
+
+ if (a < b ) {
+   return b;
+ };
+};
+
 /**
  * Write a function called `isEven` that takes a single value and
  * returns `true` if it is even and `false` if it is odd
  */
+
+function isEven(a){
+  if(a % 2 == 0){
+    return true;
+  } else{
+    return false;
+  }
+}
 
 
 /**
@@ -48,11 +88,32 @@ const greeting = (name) => {
  * returns `false` if it is even and `true` if it is odd
  */
 
+const isOdd = function (a) {
+
+  if (a % 2 == 0) {
+    return false;
+  }
+
+  else  {
+    return true;
+  }
+};
+
+
 
 /**
  * Write a function called `factorial` that takes a single integer and
  * returns the product of the integer and all the integers below it
  */
+const factorial = function(number) {
+
+for ( count =1, total=1 ; count <= number; count++ ) {
+
+  total = total * count;
+
+}
+return total;
+}
 
 
 /**
@@ -61,6 +122,23 @@ const greeting = (name) => {
  * only if they are odd. If the starting number is even, don't include it.
  */
 
+const oddfactorial = function(number) {
+
+
+
+  for (count =1, total=1; count <= number; count ++) {
+
+if (count % 2 == 0) {
+
+}
+
+else {
+  return total;
+}
+
+  total = total * count;
+}
+}
 
 /**
  * Write a function that solves the Chessboard exercise from chapter two,
@@ -68,6 +146,8 @@ const greeting = (name) => {
  * Instead of printing each line using `console.log()`, build the grid using
  * a single string and return it at the end of the function
  */
+
+
 
 
 /*******************************************
@@ -85,4 +165,3 @@ module.exports = {
   oddFactorial: typeof oddFactorial === 'function' ? oddFactorial : null,
   chessboard: typeof chessboard === 'function' ? chessboard : null,
 };
-
