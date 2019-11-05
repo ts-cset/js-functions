@@ -22,10 +22,24 @@ const greeting = (name) => {
  * Write a function called `add` that returns the sum of two numbers
  */
 
+ function add(a,b){
+  add = a+b;
+  return add;
+}
+
+console.log(add(10,15));
+
 
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
+
+ function subtract(a,b){
+   subtract = a-b;
+   return subtract;
+ }
+
+ console.log(subtract(10,5));
 
 
 /**
@@ -85,4 +99,3 @@ module.exports = {
   oddFactorial: typeof oddFactorial === 'function' ? oddFactorial : null,
   chessboard: typeof chessboard === 'function' ? chessboard : null,
 };
-
