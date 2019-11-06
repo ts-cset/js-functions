@@ -103,6 +103,14 @@ const greeting = (name) => {
  * only if they are odd. If the starting number is even, don't include it.
  */
 
+ function oddFactorial(a){
+   if (a == 0 && a % 2 == 0){
+     return 1;
+   }
+   else {
+     return oddFactorial(a-1)*a;
+   }
+ }
 
 /**
  * Write a function that solves the Chessboard exercise from chapter two,
