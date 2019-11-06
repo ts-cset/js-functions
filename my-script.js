@@ -125,14 +125,16 @@ const factorial = function(x) {
  * Instead of printing each line using `console.log()`, build the grid using
  * a single string and return it at the end of the function
  */
- function chessboard() {
+ function chessboard(x){
+
+
   let board = '';
 
-for (let line = 1; line <= 6; line++) {
-  for (let character = 1; character <= 6; character++) {
+for (let line = 1; line <= x; line++) {
+  for (let character = 1; character <= x; character++) {
     if (line % 2 !== 0) {
       // odd line
-      board += character % 2 !== 0 ? " " : " ";
+      board += character % 2 !== 0 ? " " : "#";
     } else {
       // even line
       board += character % 2 !== 0 ? "#" : " ";
@@ -141,9 +143,9 @@ for (let line = 1; line <= 6; line++) {
 
   board += '\n';
 }
-console.log(board);
+return board;
 }
-chessboard();
+
 
 
 
