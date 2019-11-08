@@ -61,11 +61,12 @@ const greeting = (name) => {
 
  function isEven(a){
    if(a % 2 == 0){
-     console.log("True");
+     return true;
    }
    else{
-     console.log("False");
+     return false;
    }
+
  }
 
 
@@ -75,11 +76,11 @@ const greeting = (name) => {
  */
 
  function isOdd(a){
-   if(isOdd % 2 != 0){
-     console.log("True");
+   if(a % 2 != 0){
+    return true;
    }
    else{
-     console.log("False");
+     return false;
    }
  }
 
@@ -104,13 +105,17 @@ const greeting = (name) => {
  */
 
  function oddFactorial(a){
-   if (a == 0 && a % 2 == 0){
-     return 1;
-   }
-   else {
-     return oddFactorial(a-1)*a;
-   }
+   for(i=1, answer=1; i<= a; i++){
+     if(a % 2 == 0){
+
+     }
+
+     else{
+       answer*= i;
+     }
+    return a;
  }
+}
 
 /**
  * Write a function that solves the Chessboard exercise from chapter two,
