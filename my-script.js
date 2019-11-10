@@ -63,18 +63,30 @@ function isEven(num) {
         return false;
     else
         return isEven(num - 2);
-};
+}
 
 /**
  * Write a function called `isOdd` that takes a single value and
  * returns `false` if it is even and `true` if it is odd
  */
-
+function isodd(num) {
+	if (num%2 == 0)
+		return false;
+	else
+		return true;
+}
 
 /**
  * Write a function called `factorial` that takes a single integer and
  * returns the product of the integer and all the integers below it
  */
+function factorial(x) {  
+  if (x === 0)
+ {
+    return 1;
+ }
+  return x * factorial(x-1);
+}
 
 
 /**
