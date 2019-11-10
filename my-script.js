@@ -19,29 +19,51 @@ const greeting = (name) => {
 
 
 /**
- * Write a function called `add` that returns the sum of two numbers
+ * Write a function called `add` that returns the sum of two numbers 
  */
-
+function add(a, b) {
+  if (b === undefined) return a;
+  else return a + b;
+}
 
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
-
+function subtract(a, b) {
+  if (b === undefined) return -a;
+  else return a - b;
+}
 
 /**
  * Write a function called `min` that returns the smaller of two numbers
  */
+function min(a, b) {
+  if (b < a ) return b;
+  else return a;
+}
 
 
 /**
  * Write a function called `max` that returns the larger of two numbers
  */
+function max(a, b) {
+  if (b > a ) return b;
+  else return a;
+}
 
 /**
  * Write a function called `isEven` that takes a single value and
  * returns `true` if it is even and `false` if it is odd
  */
-
+function isEven(num) {
+  num = Math.abs(num); 
+    if (num === 0)
+        return true;
+    else if (num === 1)
+        return false;
+    else
+        return isEven(num - 2);
+};
 
 /**
  * Write a function called `isOdd` that takes a single value and
