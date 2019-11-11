@@ -94,7 +94,8 @@ function factorial(x) {
  * returns the product of the integer and all the integers below it, but
  * only if they are odd. If the starting number is even, don't include it.
  */
-
+function factorial(x) { 
+  
 
 /**
  * Write a function that solves the Chessboard exercise from chapter two,
@@ -119,4 +120,3 @@ module.exports = {
   oddFactorial: typeof oddFactorial === 'function' ? oddFactorial : null,
   chessboard: typeof chessboard === 'function' ? chessboard : null,
 };
-
