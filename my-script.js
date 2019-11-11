@@ -17,50 +17,92 @@ const greeting = (name) => {
   return `Hello, ${name}!`;
 };
 
-
 /**
  * Write a function called `add` that returns the sum of two numbers
  */
-
+function add(number1, number2) {
+  return number1 + number2;
+}
+console.log(add(10, 20));
 
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
-
+function subtract(number1, number2) {
+return number1 - number2;
+}
+console.log(subtract(30, 5));
 
 /**
  * Write a function called `min` that returns the smaller of two numbers
  */
-
+function min(number1, number2) {
+  return Math.min(number1, number2);
+}
+console.log(min(37, 17));
 
 /**
  * Write a function called `max` that returns the larger of two numbers
  */
+function max(number1, number2) {
+  return Math.max(number1, number2);
+}
+console.log(max(250, 350));
 
 /**
  * Write a function called `isEven` that takes a single value and
  * returns `true` if it is even and `false` if it is odd
  */
-
+function isEven(value) {
+if (value % 2 === 0) {
+  return true;
+}
+else if (value % 1 === 0) {
+  return false;
+}
+}
+console.log(isEven(12));
+console.log(isEven(9));
 
 /**
  * Write a function called `isOdd` that takes a single value and
  * returns `false` if it is even and `true` if it is odd
  */
-
+function isOdd(value) {
+  if (value % 2 === 0) {
+    return false;
+  }
+  else if (value % 1 === 0) {
+    return true;
+  }
+}
+console.log(isOdd(20));
+console.log(isOdd(25));
 
 /**
  * Write a function called `factorial` that takes a single integer and
  * returns the product of the integer and all the integers below it
  */
-
+ function factorial(integer) {
+   for (number = 1, counter = 1; integer >= number; number++) {
+     counter *= number;
+   }
+   return counter;
+ }
+console.log(factorial(6));
 
 /**
  * Write a function called `oddFactorial` that takes a single integer and
  * returns the product of the integer and all the integers below it, but
  * only if they are odd. If the starting number is even, don't include it.
  */
-
+ function oddFactorial(integer) {
+   for (number = 1, counter = 1; integer >= number; number += 2) {
+     counter *= number;
+   }
+   return counter;
+ }
+console.log(oddFactorial(6));
 
 /**
  * Write a function that solves the Chessboard exercise from chapter two,
@@ -68,7 +110,24 @@ const greeting = (name) => {
  * Instead of printing each line using `console.log()`, build the grid using
  * a single string and return it at the end of the function
  */
-
+ function chessboard() {
+   let result="", row = 6, column = 6;
+   for (let board = 0; board < column; board++) {
+     for (let counter = 0; counter < row; counter++) {
+       if (board % 2 == 0 && counter % 2 == 0) {
+         result += " ";
+       }
+       else if (board % 2 != 0 && counter % 2 != 0) {
+         result += " ";
+       }
+       else {
+         result += "#";
+       }
+     }
+     result += "\n";
+   }
+   return result;
+ }
 
 /*******************************************
  * DO NOT CHANGE ANYTHING BELOW THIS LINE!
@@ -85,4 +144,3 @@ module.exports = {
   oddFactorial: typeof oddFactorial === 'function' ? oddFactorial : null,
   chessboard: typeof chessboard === 'function' ? chessboard : null,
 };
-
