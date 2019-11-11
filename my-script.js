@@ -21,59 +21,55 @@ const greeting = (name) => {
 /**
  * Write a function called `add` that returns the sum of two numbers
  */
-const add = function(x,y) {
-  return x + y;
-};
+const add = (x, y) => x + y;
 
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
-const subtract = function(x,y) {
-  return x - y;
-};
+const subtract = (x, y) => x - y;
 
 /**
  * Write a function called `min` that returns the smaller of two numbers
  */
-const min = function(x,y) {
-  return Math.min(x,y);
-};
+const min = (x, y) => Math.min(x, y);
 
 /**
  * Write a function called `max` that returns the larger of two numbers
  */
-const max = function(x,y) {
-  return Math.max(x,y);
-};
+const max = (x, y) => Math.max(x, y);
+
 /**
  * Write a function called `isEven` that takes a single value and
  * returns `true` if it is even and `false` if it is odd
  */
- const isEven = function(x) {
-   return x % 2 == 0;
- };
-
+const isEven = (x) => x % 2 == 0;
 
 /**
  * Write a function called `isOdd` that takes a single value and
  * returns `false` if it is even and `true` if it is odd
  */
-const isOdd = function(y) {
-  return x % 2 == 1;
-};
+const isOdd = (y) => y % 2 == 1;
 
 /**
  * Write a function called `factorial` that takes a single integer and
  * returns the product of the integer and all the integers below it
  */
-
+const factorial = function(x) {
+  return x >= 1 ? x * factorial(x - 1) : 1;
+};
 
 /**
  * Write a function called `oddFactorial` that takes a single integer and
  * returns the product of the integer and all the integers below it, but
  * only if they are odd. If the starting number is even, don't include it.
  */
-
+ const oddFactorial = x => {
+   let result = 1;
+   for (let count = 1; count <= x; count += 2) {
+     result *= count;
+   }
+   return result;
+ };
 
 /**
  * Write a function that solves the Chessboard exercise from chapter two,
@@ -81,6 +77,21 @@ const isOdd = function(y) {
  * Instead of printing each line using `console.log()`, build the grid using
  * a single string and return it at the end of the function
  */
+
+let board = '';
+const chessboard = function(size) {
+  for (let line = 1; line <= size; line++) {
+    for (let character = 1; character <= size; character++) {
+      if (line % 2 !== 0) {
+        board += character % 2 !== 0 ? " " : "#";
+      } else {
+        board += character % 2 !== 0 ? "#" : " ";
+      }
+    }
+    board += '\n';
+  }
+  return board;
+};
 
 
 /*******************************************
