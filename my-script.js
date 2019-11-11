@@ -69,7 +69,7 @@ function isEven(num) {
  * Write a function called `isOdd` that takes a single value and
  * returns `false` if it is even and `true` if it is odd
  */
-function isodd(num) {
+function isOdd(num) {
 	if (num%2 == 0)
 		return false;
 	else
@@ -82,7 +82,8 @@ function isodd(num) {
  */
 function factorial(x) {  
   if (x === 0)
- {
+{
+
     return 1;
  }
   return x * factorial(x-1);
@@ -94,8 +95,21 @@ function factorial(x) {
  * returns the product of the integer and all the integers below it, but
  * only if they are odd. If the starting number is even, don't include it.
  */
-function factorial(x) { 
-  
+
+function oddFactorial(x) {
+  let one = 1;
+ for( i = 0; i < x+1; i++){
+   if( i % 2 == 0){
+     one = one * 1;
+   } else{
+     one = one * i;
+     
+   }
+   
+ }
+ return one;
+ }
+
 
 /**
  * Write a function that solves the Chessboard exercise from chapter two,
@@ -103,6 +117,25 @@ function factorial(x) {
  * Instead of printing each line using `console.log()`, build the grid using
  * a single string and return it at the end of the function
  */
+
+function chessboard(x) {
+  let board = '';
+  
+  for (let line = 1; line <= x; line++) {
+    for (let character = 1; character <= x; character++) {
+      if (line % 2 !== 0) {
+        // odd line
+        board += character % 2 !== 0 ? " " : "#";
+      } else {
+        // even line
+        board += character % 2 !== 0 ? "#" : " ";
+      }
+    }
+  
+    board += '\n';
+  }
+    return board;
+  }
 
 
 /*******************************************
