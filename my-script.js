@@ -136,10 +136,11 @@ function oddFactorial(a){
  * a single string and return it at the end of the function
  */
 
- function Chessboard(x){
+ function chessboard(a){
+   let dimenson=a;
    let string="";
 
-  for(q=0; q<x; q++){
+  for(q=0; q<dimenson; q++){
      if(q % 2 == 0){
     string += " ";
   }
@@ -149,13 +150,11 @@ function oddFactorial(a){
     }
 
   string += "\n";
-  }
+}
 
-console.log(string);
+return string;
 
-return Chessboard();
  }
-
 
 
 /*******************************************
