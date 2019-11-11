@@ -40,13 +40,18 @@ console.log(subtract(5, 3))
  * Write a function called `min` that returns the smaller of two numbers
  */
 
-Math.min(16, 15, 2);
+var min = function (x, y) {
+  return (x <= y) ? x : y;
+};
+console.log(min(5, 10));
 
 /**
  * Write a function called `max` that returns the larger of two numbers
  */
-
-Math.max(10, 13, 5);
+var max = function (x, y) {
+  return (x >= y) ? x : y;
+};
+console.log(max(5, 10));
 
 /**
  * Write a function called `isEven` that takes a single value and
@@ -105,13 +110,15 @@ console.log(oddFactorial(5));
  * a single string and return it at the end of the function
  */
 
-function chessBoard(symbol, gridSize) {
+function chessBoard(x, gridSize) {
   gridSize = gridSize || 8;
-  symbol = symbol || "#";
+  x = x || "#";
   let pattern = "";
   for (let i = 0; i < gridSize / 2; i++)
-    pattern += symbol + " ";
+    pattern += x + " ";
+
   for (let i = 0; i < gridSize; i++) {
+
     if (i % 2 === 0) {
       console.log(pattern);
     } else {
