@@ -110,14 +110,12 @@ function chessBoard(symbol, gridSize) {
   symbol = symbol || "#";
   let pattern = "";
   for (let i = 0; i < gridSize / 2; i++)
-    pattern += symbol + " "; //Forming the pattern
-
+    pattern += symbol + " ";
   for (let i = 0; i < gridSize; i++) {
-
     if (i % 2 === 0) {
       console.log(pattern);
     } else {
-      console.log(" " + pattern) //For even rows adding the space in front
+      console.log(" " + pattern)
     }
   }
 }
