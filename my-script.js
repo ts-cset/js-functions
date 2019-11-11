@@ -103,18 +103,30 @@ const greeting = (name) => {
  * returns the product of the integer and all the integers below it, but
  * only if they are odd. If the starting number is even, don't include it.
  */
-
+/*
  function oddFactorial(a){
-   for(i=1, answer=1; i<= a; i++){
-     if(a % 2 == 0){
+   if (a % 2==0){
+     a-1;
+     return a;
+   }
+   if(a<=1){
+     return 1;
+   }
+   else{
+     (a-2)*a;
+     return a;
+   }
 
-     }
-
-     else{
-       answer*= i;
-     }
-    return a;
+   return oddFactorial(a);
  }
+*/
+
+function oddFactorial(a){
+  for(i=1, b=1; i<= a; i=i+2){
+    b=b*i;
+
+  }
+  return b;
 }
 
 /**
@@ -123,6 +135,27 @@ const greeting = (name) => {
  * Instead of printing each line using `console.log()`, build the grid using
  * a single string and return it at the end of the function
  */
+
+ function Chessboard(x){
+   let string="";
+
+  for(q=0; q<x; q++){
+     if(q % 2 == 0){
+    string += " ";
+  }
+
+    for(i=0; i<4; i++){
+    string += "# ";
+    }
+
+  string += "\n";
+  }
+
+console.log(string);
+
+return Chessboard();
+ }
+
 
 
 /*******************************************
