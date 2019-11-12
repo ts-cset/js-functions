@@ -73,19 +73,23 @@ if (x % 2 == 0) {
  * Write a function called `factorial` that takes a single integer and
  * returns the product of the integer and all the integers below it
  */
-function factorial(x)
-  factorial !== - factorial {
-    factorial = factorial ++;
+const factorial = function(x) {
+  let product = 1;
+
+  for (; x > 0; x --) {
+    product *= integer;
   }
+  return product;
+};
 
 /**
  * Write a function called `oddFactorial` that takes a single integer and
  * returns the product of the integer and all the integers below it, but
  * only if they are odd. If the starting number is even, don't include it.
  */
-function oddFactorial(x) {
+const oddFactorial = function(x)
   for (let )
-}
+};
 
 /**
  * Write a function that solves the Chessboard exercise from chapter two,
@@ -93,7 +97,19 @@ function oddFactorial(x) {
  * Instead of printing each line using `console.log()`, build the grid using
  * a single string and return it at the end of the function
  */
+const chessboard = function(size) {
+  let board = '';
 
+  for (let count = 1; count <= 8; count++) {
+    if (count % 2 !==0) {
+    board = board + " # # # #" + '\n';
+    } else {
+    board = board + "# # # # " + '\n';
+    }
+  }
+
+  return board;
+}
 
 /*******************************************
  * DO NOT CHANGE ANYTHING BELOW THIS LINE!
