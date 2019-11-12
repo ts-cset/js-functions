@@ -22,25 +22,52 @@ const greeting = (name) => {
  * Write a function called `add` that returns the sum of two numbers
  */
 
+ function add(a,b){
+  add = a+b;
+  return add;
+}
 
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
 
+ function subtract(a,b){
+   subtract = a-b;
+   return subtract;
+ }
 
 /**
  * Write a function called `min` that returns the smaller of two numbers
  */
 
+ function min(a, b){
+  min=Math.min(a, b);
+  return min;
+};
 
 /**
  * Write a function called `max` that returns the larger of two numbers
  */
 
+ function max(a, b){
+  max=Math.max(a, b);
+  return max;
+};
+
 /**
  * Write a function called `isEven` that takes a single value and
  * returns `true` if it is even and `false` if it is odd
  */
+
+ function isEven(a){
+   if(a % 2 == 0){
+     return true;
+   }
+   else{
+     return false;
+   }
+
+ }
 
 
 /**
@@ -48,19 +75,59 @@ const greeting = (name) => {
  * returns `false` if it is even and `true` if it is odd
  */
 
+ function isOdd(a){
+   if(a % 2 != 0){
+    return true;
+   }
+   else{
+     return false;
+   }
+ }
 
 /**
  * Write a function called `factorial` that takes a single integer and
  * returns the product of the integer and all the integers below it
  */
 
+ function factorial(a){
+   if (a == 0){
+     return 1;
+   }
+   else {
+     return factorial(a-1)*a;
+   }
+ }
 
 /**
  * Write a function called `oddFactorial` that takes a single integer and
  * returns the product of the integer and all the integers below it, but
  * only if they are odd. If the starting number is even, don't include it.
  */
+/*
+ function oddFactorial(a){
+   if (a % 2==0){
+     a-1;
+     return a;
+   }
+   if(a<=1){
+     return 1;
+   }
+   else{
+     (a-2)*a;
+     return a;
+   }
 
+   return oddFactorial(a);
+ }
+*/
+
+function oddFactorial(a){
+  for(i=1, b=1; i<= a; i=i+2){
+    b=b*i;
+
+  }
+  return b;
+}
 
 /**
  * Write a function that solves the Chessboard exercise from chapter two,
@@ -68,6 +135,26 @@ const greeting = (name) => {
  * Instead of printing each line using `console.log()`, build the grid using
  * a single string and return it at the end of the function
  */
+
+ function chessboard(a){
+   let dimenson=a;
+   let string="";
+
+  for(q=0; q<dimenson; q++){
+     if(q % 2 == 0){
+    string += " ";
+  }
+
+    for(i=0; i<4; i++){
+    string += "# ";
+    }
+
+  string += "\n";
+}
+
+return string;
+
+ }
 
 
 /*******************************************
@@ -85,4 +172,3 @@ module.exports = {
   oddFactorial: typeof oddFactorial === 'function' ? oddFactorial : null,
   chessboard: typeof chessboard === 'function' ? chessboard : null,
 };
-
