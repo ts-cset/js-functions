@@ -21,45 +21,108 @@ const greeting = (name) => {
 /**
  * Write a function called `add` that returns the sum of two numbers
  */
-
+const add = (x, y) => {
+  return x + y;
+};
 
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
-
+ const subtract = (x, y) => {
+   return x - y;
+ };
 
 /**
  * Write a function called `min` that returns the smaller of two numbers
  */
-
+ const min = (x, y) => {
+   if (x < y) {
+     return x;
+   } else return y;
+ };
 
 /**
  * Write a function called `max` that returns the larger of two numbers
  */
 
-/**
+ const max = (x, y) => {
+   if (x > y) {
+     return x;
+   } else return y;
+ };
+
+/*
  * Write a function called `isEven` that takes a single value and
  * returns `true` if it is even and `false` if it is odd
  */
-
+ const isEven = (x) => {
+   if (x == 0){
+    return true;
+ }
+   if (x == 1){
+    return false;
+   }
+   else if (x > 0){
+   return isEven(x - 2);
+}
+   else if (x < 0){
+     return isEven(x + 2)
+   }
+ };
 
 /**
  * Write a function called `isOdd` that takes a single value and
  * returns `false` if it is even and `true` if it is odd
  */
-
+ const isOdd = (x) => {
+   if (x == 0){
+     return false;
+ }
+   if (x == 1){
+     return true;
+   }
+   else if (x > 0){
+     return isOdd(x - 2);
+ }
+   else if (x < 0){
+     return isOdd(x + 2)
+   }
+ };
 
 /**
  * Write a function called `factorial` that takes a single integer and
  * returns the product of the integer and all the integers below it
  */
+ const factorial = (x) => {
 
+ if (x > 0){
+   return x * factorial(x - 1);
+ }
+ else if (x == 0){
+   return 1;
+ }
+
+};
 
 /**
  * Write a function called `oddFactorial` that takes a single integer and
  * returns the product of the integer and all the integers below it, but
  * only if they are odd. If the starting number is even, don't include it.
  */
+ const oddFactorial = (x) => {
+  if (x % 2 == 0){
+    return oddFactorial(x - 1);
+  }
+
+  else if (x > 1){
+    return x * oddFactorial(x - 2);
+  }
+
+  else if (x == 1){
+    return 1;
+  }
+
+ };
 
 
 /**
@@ -68,6 +131,23 @@ const greeting = (name) => {
  * Instead of printing each line using `console.log()`, build the grid using
  * a single string and return it at the end of the function
  */
+ const chessboard = (x) => {
+
+  let char = "";
+  for(let y = 0; y < x; y++){
+    for(let c = 0; c < x; c++){
+
+      if (y % 2 == 0 && c % 2 == 0 || y % 2 != 0 && c % 2 != 0){
+        char = char + " ";
+      }
+      else{
+        char = char + "#";
+      }
+    }
+    char = char + "\n";
+  }
+return char;
+ };
 
 
 /*******************************************
@@ -85,4 +165,3 @@ module.exports = {
   oddFactorial: typeof oddFactorial === 'function' ? oddFactorial : null,
   chessboard: typeof chessboard === 'function' ? chessboard : null,
 };
-
