@@ -21,46 +21,71 @@ const greeting = (name) => {
 /**
  * Write a function called `add` that returns the sum of two numbers
  */
-
+function add(x,y) {
+  return x + y;
+}
 
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
-
+function subtract(x,y) {
+  return x - y;
+}
 
 /**
  * Write a function called `min` that returns the smaller of two numbers
  */
-
+function min(x, y) {
+  return Math.min(x,y);
+}
 
 /**
  * Write a function called `max` that returns the larger of two numbers
  */
-
+function max(x, y) {
+  return Math.max(x,y);
+}
 /**
  * Write a function called `isEven` that takes a single value and
  * returns `true` if it is even and `false` if it is odd
  */
+function isEven(x) {
+if (x % 2 == 0) {
+  return true;
+}else (x % 2 != 0)
+  return false;
+}
 
 
 /**
  * Write a function called `isOdd` that takes a single value and
  * returns `false` if it is even and `true` if it is odd
  */
+function isOdd(x) {
+if (x % 2 == 0) {
+  return false;
+}else (x % 2 != 0)
+  return true;
+}
 
 
 /**
  * Write a function called `factorial` that takes a single integer and
  * returns the product of the integer and all the integers below it
  */
-
+function factorial(x)
+  factorial !== - factorial {
+    factorial = factorial ++;
+  }
 
 /**
  * Write a function called `oddFactorial` that takes a single integer and
  * returns the product of the integer and all the integers below it, but
  * only if they are odd. If the starting number is even, don't include it.
  */
-
+function oddFactorial(x) {
+  for (let )
+}
 
 /**
  * Write a function that solves the Chessboard exercise from chapter two,
@@ -85,4 +110,3 @@ module.exports = {
   oddFactorial: typeof oddFactorial === 'function' ? oddFactorial : null,
   chessboard: typeof chessboard === 'function' ? chessboard : null,
 };
-
