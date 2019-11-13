@@ -36,23 +36,31 @@ console.log(subtract(30, 5));
 /**
  * Write a function called `min` that returns the smaller of two numbers
  */
+/*
 function min(number1, number2) {
   return Math.min(number1, number2);
 }
 console.log(min(37, 17));
+*/
+const min = (one, two) => one < two ? one : two;
 
 /**
  * Write a function called `max` that returns the larger of two numbers
  */
+ /*
 function max(number1, number2) {
   return Math.max(number1, number2);
 }
 console.log(max(250, 350));
+*/
+const max = (one, two) => one > two ? one : two;
+
 
 /**
  * Write a function called `isEven` that takes a single value and
  * returns `true` if it is even and `false` if it is odd
  */
+ /*
 function isEven(value) {
 if (value % 2 === 0) {
   return true;
@@ -63,11 +71,16 @@ else if (value % 1 === 0) {
 }
 console.log(isEven(12));
 console.log(isEven(9));
+*/
+function isEven(val) {
+return (val % 2 === 0) ? true : false;
+}
 
 /**
  * Write a function called `isOdd` that takes a single value and
  * returns `false` if it is even and `true` if it is odd
  */
+ /*
 function isOdd(value) {
   if (value % 2 === 0) {
     return false;
@@ -78,16 +91,18 @@ function isOdd(value) {
 }
 console.log(isOdd(20));
 console.log(isOdd(25));
+*/
+const isOdd = val => !isEven(val);
 
 /**
  * Write a function called `factorial` that takes a single integer and
  * returns the product of the integer and all the integers below it
  */
  function factorial(integer) {
-   for (number = 1, counter = 1; integer >= number; number++) {
-     counter *= number;
+   for (counter = 1, product = 1; integer >= counter; counter++) {
+     product *= counter;
    }
-   return counter;
+   return product;
  }
 console.log(factorial(6));
 
@@ -97,10 +112,11 @@ console.log(factorial(6));
  * only if they are odd. If the starting number is even, don't include it.
  */
  function oddFactorial(integer) {
-   for (number = 1, counter = 1; integer >= number; number += 2) {
-     counter *= number;
+   let product = 1;
+   for (let counter = 1; integer >= counter; counter += 2) {
+     product *= counter;
    }
-   return counter;
+   return product;
  }
 console.log(oddFactorial(6));
 
