@@ -13,47 +13,80 @@
  * Write a function called `greeting` that returns the string `Hello, <name>!`
  * where <name> is passed to the function as an argument
  */
+
 const greeting = (name) => {
   return `Hello, ${name}!`;
 };
-
 
 /**
  * Write a function called `add` that returns the sum of two numbers
  */
 
+function add(x, y) {
+  return x + y
+}
+console.log(add(2, 3))
 
 /**
  * Write a function called `subtract` that returns the difference between two numbers
  */
 
+function subtract(x, y) {
+  return x - y
+}
+console.log(subtract(5, 3))
 
 /**
  * Write a function called `min` that returns the smaller of two numbers
  */
 
+var min = function (x, y) {
+  return (x <= y) ? x : y;
+};
+console.log(min(5, 10));
 
 /**
  * Write a function called `max` that returns the larger of two numbers
  */
+var max = function (x, y) {
+  return (x >= y) ? x : y;
+};
+console.log(max(5, 10));
 
 /**
  * Write a function called `isEven` that takes a single value and
  * returns `true` if it is even and `false` if it is odd
  */
 
+function isEven(x) {
+  if (x % 2 === 0) return true;
+  else return false;
+}
+console.log(isEven(4));
 
 /**
  * Write a function called `isOdd` that takes a single value and
  * returns `false` if it is even and `true` if it is odd
  */
 
+function isOdd(x) {
+  if (x % 2 === 0) return false;
+  else return true;
+}
+console.log(isOdd(5));
 
 /**
  * Write a function called `factorial` that takes a single integer and
  * returns the product of the integer and all the integers below it
  */
 
+function factorial(x) {
+  if (x === 0) {
+    return 1;
+  }
+  return x * factorial(x - 1);
+}
+console.log(factorial(5));
 
 /**
  * Write a function called `oddFactorial` that takes a single integer and
@@ -61,7 +94,17 @@ const greeting = (name) => {
  * only if they are odd. If the starting number is even, don't include it.
  */
 
-
+const oddFactorial = function (x) {
+  let b = 1;
+  for (let a = 0; a < x + 1; a++) {
+    if (a % 2 == 0) {
+      b = b * 1;
+    } else {
+      b = b * a;
+    }
+  }
+  return b;
+}
 /**
  * Write a function that solves the Chessboard exercise from chapter two,
  * https://eloquentjavascript.net/02_program_structure.html#i_swb9JBtSQQ
@@ -69,6 +112,28 @@ const greeting = (name) => {
  * a single string and return it at the end of the function
  */
 
+function chessboard(x) {
+  let string = "";
+  for (let column = 0; column < x; column++) {
+    for (let row = 0; row < x; row++) {
+      if (column % 2 == 0) {
+        if (row % 2 == 0) {
+          string += " ";
+        } else {
+          string += "#";
+        }
+      } else {
+        if (row % 2 == 0) {
+          string += "#";
+        } else {
+          string += " ";
+        }
+      }
+    }
+    string = string + "\n";
+  }
+  return (string);
+}
 
 /*******************************************
  * DO NOT CHANGE ANYTHING BELOW THIS LINE!
@@ -85,4 +150,3 @@ module.exports = {
   oddFactorial: typeof oddFactorial === 'function' ? oddFactorial : null,
   chessboard: typeof chessboard === 'function' ? chessboard : null,
 };
-
