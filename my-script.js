@@ -94,15 +94,17 @@ console.log(factorial(5));
  * only if they are odd. If the starting number is even, don't include it.
  */
 
-function oddFactorial(x) {
-  if (x === 1) {
-    return 1;
-  } else {
-    return x * oddFactorial(x - 2);
+const oddFactorial = function (x) {
+  let b = 1;
+  for (let a = 0; a < x + 1; a++) {
+    if (a % 2 == 0) {
+      b = b * 1;
+    } else {
+      b = b * a;
+    }
   }
+  return b;
 }
-console.log(oddFactorial(5));
-
 /**
  * Write a function that solves the Chessboard exercise from chapter two,
  * https://eloquentjavascript.net/02_program_structure.html#i_swb9JBtSQQ
@@ -110,23 +112,28 @@ console.log(oddFactorial(5));
  * a single string and return it at the end of the function
  */
 
-function chessBoard(x, gridSize) {
-  gridSize = gridSize || 8;
-  x = x || "#";
-  let pattern = "";
-  for (let i = 0; i < gridSize / 2; i++)
-    pattern += x + " ";
-
-  for (let i = 0; i < gridSize; i++) {
-
-    if (i % 2 === 0) {
-      console.log(pattern);
-    } else {
-      console.log(" " + pattern)
+function chessboard(x) {
+  let string = "";
+  for (let column = 0; column < x; column++) {
+    for (let row = 0; row < x; row++) {
+      if (column % 2 == 0) {
+        if (row % 2 == 0) {
+          string += " ";
+        } else {
+          string += "#";
+        }
+      } else {
+        if (row % 2 == 0) {
+          string += "#";
+        } else {
+          string += " ";
+        }
+      }
     }
+    string = string + "\n";
   }
+  return (string);
 }
-chessBoard('#', 8);
 
 /*******************************************
  * DO NOT CHANGE ANYTHING BELOW THIS LINE!
